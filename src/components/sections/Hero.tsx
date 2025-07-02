@@ -14,7 +14,7 @@ export function Hero() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
   
-  const parallaxTransform = useParallax(heroRef, { speed: 0.5 });
+  const parallaxTransform = useParallax(heroRef as React.RefObject<HTMLElement>, { speed: 0.5 });
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.5 });
@@ -38,7 +38,9 @@ export function Hero() {
       ease: "power3.out"
     }, "-=0.3");
 
-    return () => tl.kill();
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   const scrollToNext = () => {
