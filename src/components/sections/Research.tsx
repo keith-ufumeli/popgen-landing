@@ -67,25 +67,33 @@ export function Research() {
         trigger: sectionRef.current,
         start: "top 80%",
         end: "bottom 20%",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none none"
       }
     });
 
-    tl.from(titleRef.current, {
-      y: 50,
+    // Set initial states
+    gsap.set([titleRef.current, cardsRef.current?.children], {
       opacity: 0,
+      y: 30
+    });
+
+    tl.to(titleRef.current, {
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       ease: "power3.out"
     })
-    .from(cardsRef.current?.children || [], {
-      y: 30,
-      opacity: 0,
+    .to(cardsRef.current?.children || [], {
+      y: 0,
+      opacity: 1,
       duration: 0.6,
       stagger: 0.15,
       ease: "power3.out"
     }, "-=0.4");
 
-    return () => tl.kill();
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   return (
