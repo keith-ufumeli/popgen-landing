@@ -57,9 +57,7 @@ function PopulationCluster({ data }: { data: ClusterData }) {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            array={data.points}
-            count={100}
-            itemSize={3}
+            args={[data.points, 3]}
           />
         </bufferGeometry>
         <PointMaterial
