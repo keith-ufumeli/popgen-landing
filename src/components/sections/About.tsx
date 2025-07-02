@@ -161,8 +161,8 @@ export function About() {
             ref={titleRef}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
           >
-            Understanding 
-            <span className="text-gradient"> Population Genetics</span>
+            Understanding{' '}
+            <span className="text-gradient">Population Genetics</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Population genetics studies how genetic variation is distributed within and between 

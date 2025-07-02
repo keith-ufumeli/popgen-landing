@@ -288,7 +288,7 @@ export function Contact() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                          className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-300 focus:bg-white transition-colors"
                           placeholder="Your name"
                         />
                       </div>
@@ -303,7 +303,7 @@ export function Contact() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                          className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-300 focus:bg-white transition-colors"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -320,7 +320,7 @@ export function Contact() {
                           name="organization"
                           value={formData.organization}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                          className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-300 focus:bg-white transition-colors"
                           placeholder="University, Company, etc."
                         />
                       </div>
@@ -334,7 +334,7 @@ export function Contact() {
                           required
                           value={formData.userType}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                          className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-300 focus:bg-white transition-colors"
                         >
                           <option value="researcher">Researcher</option>
                           <option value="student">Student</option>
@@ -355,7 +355,7 @@ export function Contact() {
                         rows={6}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 border border-slate-200 bg-slate-50 rounded-lg focus:ring-2 focus:ring-blue-200 focus:border-blue-300 focus:bg-white transition-colors resize-none"
                         placeholder="Tell us about your interests, research goals, or how we can help..."
                       />
                     </div>
