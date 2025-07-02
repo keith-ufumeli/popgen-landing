@@ -194,7 +194,7 @@ export function Contact() {
             <span className="text-gradient"> Revolution</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Whether you're a researcher, student, or industry professional, we're here to 
+            Whether you&apos;re a researcher, student, or industry professional, we&apos;re here to 
             support your journey in population genetics and AI. Get in touch to learn more 
             about our resources, collaborations, and opportunities.
           </p>
@@ -230,7 +230,7 @@ export function Contact() {
           <>
             {/* Contact Information Cards */}
             <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
-              {contactInfo.map((info, index) => {
+              {contactInfo.map((info) => {
                 const colorClasses = getColorClasses(info.color);
                 return (
                   <Card key={info.title} hover={true} className="h-full text-center group">
@@ -277,7 +277,7 @@ export function Contact() {
                         </svg>
                         <div>
                           <p className="text-sm font-medium text-green-800">Message sent successfully!</p>
-                          <p className="text-xs text-green-600 mt-1">We'll get back to you within 24 hours.</p>
+                          <p className="text-xs text-green-600 mt-1">We&apos;ll get back to you within 24 hours.</p>
                         </div>
                       </div>
                     </div>
@@ -503,7 +503,7 @@ export function Contact() {
             </div>
             <div className="text-center mt-8">
               <p className="text-slate-600 mb-4">
-                Don't see your question? We'd love to hear from you.
+                Don&apos;t see your question? We&apos;d love to hear from you.
               </p>
               <Button 
                 variant="outline" 

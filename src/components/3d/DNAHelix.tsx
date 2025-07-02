@@ -71,12 +71,13 @@ function HelixGeometry() {
             <bufferGeometry>
               <bufferAttribute
                 attach="attributes-position"
-                array={new Float32Array([
-                  Math.cos(t) * 2, y, Math.sin(t) * 2,
-                  Math.cos(t + Math.PI) * 2, y, Math.sin(t + Math.PI) * 2
-                ])}
-                count={2}
-                itemSize={3}
+                args={[
+                  new Float32Array([
+                    Math.cos(t) * 2, y, Math.sin(t) * 2,
+                    Math.cos(t + Math.PI) * 2, y, Math.sin(t + Math.PI) * 2
+                  ]),
+                  3
+                ]}
               />
             </bufferGeometry>
             <lineBasicMaterial color="#8B5CF6" />
@@ -89,9 +90,7 @@ function HelixGeometry() {
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
-            array={helixPoints}
-            count={1000}
-            itemSize={3}
+            args={[helixPoints, 3]}
           />
         </bufferGeometry>
         <PointMaterial
@@ -115,17 +114,17 @@ function CameraController() {
     camera.lookAt(0, 0, 0);
   }, [camera]);
 
-  return <OrbitControls args={[camera, gl.domElement]} enableZoom={false} enablePan={false} />;
+  return <OrbitControls enableZoom={false} enablePan={false} />;
 }
 
 // Loading fallback
-function LoadingFallback() {
-  return (
-    <div className="absolute inset-0 flex items-center justify-center">
-      <div className="text-white/70 text-lg">Loading DNA visualization...</div>
-    </div>
-  );
-}
+// function LoadingFallback() {
+//   return (
+//     <div className="absolute inset-0 flex items-center justify-center">
+//       <div className="text-white/70 text-lg">Loading DNA visualization...</div>
+//     </div>
+//   );
+// }
 
 // Main DNA Helix component
 export function DNAHelix() {

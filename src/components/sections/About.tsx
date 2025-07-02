@@ -181,7 +181,7 @@ export function About() {
 
         {/* Core Concepts */}
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {concepts.map((concept, index) => (
+          {concepts.map((concept) => (
             <Card 
               key={concept.title} 
               hover={true}
@@ -243,7 +243,7 @@ export function About() {
             Evolution of the Field
           </h3>
           <div ref={timelineRef} className="space-y-6">
-            {milestones.map((milestone, index) => {
+            {milestones.map((milestone) => {
               const colorClasses = getColorClasses(milestone.color);
               return (
                 <div key={milestone.year} className="flex items-start space-x-6 group">

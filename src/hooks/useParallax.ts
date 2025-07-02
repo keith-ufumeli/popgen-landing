@@ -20,7 +20,6 @@ export function useParallax(
       const element = elementRef.current;
       if (!element) return;
 
-      const rect = element.getBoundingClientRect();
       const scrolled = window.pageYOffset;
       const rate = scrolled * -speed;
 

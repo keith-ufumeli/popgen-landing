@@ -143,7 +143,7 @@ export function Applications() {
         </div>
 
         <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {applications.map((app, index) => {
+          {applications.map((app) => {
             const colorClasses = getColorClasses(app.color);
             const [gradientClasses, textColorClass, bgColorClass] = colorClasses.split(' ');
             

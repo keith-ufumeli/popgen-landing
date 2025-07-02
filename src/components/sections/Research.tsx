@@ -114,13 +114,13 @@ export function Research() {
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
             Artificial intelligence is transforming how we analyze genetic data, enabling 
-            discoveries that were impossible with traditional methods. Here's how AI is 
+            discoveries that were impossible with traditional methods. Here&apos;s how AI is 
             revolutionizing key areas of population genetics research.
           </p>
         </div>
 
         <div ref={cardsRef} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {researchAreas.map((area, index) => (
+          {researchAreas.map((area) => (
             <Card 
               key={area.title} 
               hover={true}

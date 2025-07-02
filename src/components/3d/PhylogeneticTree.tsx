@@ -107,7 +107,7 @@ function TreeBranch({
   animated?: boolean;
   delay?: number;
 }) {
-  const lineRef = useRef<THREE.Line>(null);
+  const lineRef = useRef<any>(null);
   const [progress, setProgress] = useState(animated ? 0 : 1);
 
   useEffect(() => {
@@ -187,7 +187,7 @@ function TreeNode({
       )}
       
       {/* Render children */}
-      {node.children.map((child, index) => (
+      {node.children.map((child) => (
         <TreeNode
           key={child.id}
           node={child}
