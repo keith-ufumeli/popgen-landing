@@ -57,7 +57,7 @@ export function Hero() {
       className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 pt-16"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      <div className="absolute inset-0 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       
       {/* 3D DNA Helix - Responsive positioning */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full z-10 opacity-60 md:opacity-60 sm:opacity-40 max-sm:opacity-20 max-sm:w-full max-sm:top-1/2 max-sm:translate-y-0 max-sm:h-1/2">
