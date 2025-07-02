@@ -79,25 +79,33 @@ export function Applications() {
         trigger: sectionRef.current,
         start: "top 80%",
         end: "bottom 20%",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none none"
       }
     });
 
-    tl.from(titleRef.current, {
-      y: 50,
+    // Set initial states
+    gsap.set([titleRef.current, cardsRef.current?.children], {
       opacity: 0,
+      y: 30
+    });
+
+    tl.to(titleRef.current, {
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       ease: "power3.out"
     })
-    .from(cardsRef.current?.children || [], {
-      y: 30,
-      opacity: 0,
+    .to(cardsRef.current?.children || [], {
+      y: 0,
+      opacity: 1,
       duration: 0.6,
       stagger: 0.1,
       ease: "power3.out"
     }, "-=0.4");
 
-    return () => tl.kill();
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   const getColorClasses = (color: string) => {
@@ -124,7 +132,7 @@ export function Applications() {
             ref={titleRef}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
           >
-            Real-World 
+            Real-World{' '}
             <span className="text-gradient"> Applications</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -169,12 +177,13 @@ export function Applications() {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between">
+                <div className="space-y-4">
                   <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800`}>
                     {app.impact}
                   </div>
-                  <button className={`text-sm font-medium ${textColorClass} hover:underline`}>
-                    Learn more →
+                  <button className={`text-sm font-medium ${textColorClass} hover:underline flex items-center group`}>
+                    Learn more 
+                    <span className="ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
                   </button>
                 </div>
               </Card>
