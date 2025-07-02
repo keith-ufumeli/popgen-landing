@@ -107,7 +107,7 @@ function HelixGeometry() {
 
 // Camera controller
 function CameraController() {
-  const { camera, gl } = useThree();
+  const { camera } = useThree();
   
   useEffect(() => {
     camera.position.set(8, 2, 8);

@@ -107,7 +107,7 @@ function TreeBranch({
   animated?: boolean;
   delay?: number;
 }) {
-  const lineRef = useRef<any>(null);
+  const lineRef = useRef(null);
   const [progress, setProgress] = useState(animated ? 0 : 1);
 
   useEffect(() => {
