@@ -54,13 +54,13 @@ export function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
+      className="relative min-h-screen flex items-start pt-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       
-      {/* 3D DNA Helix */}
-      <div className="absolute inset-0 z-10">
+      {/* 3D DNA Helix - Moved to right side */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full z-10 opacity-60">
         <DNAHelix />
       </div>
 
@@ -74,35 +74,35 @@ export function Hero() {
         <div className="absolute bottom-40 left-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse opacity-50" />
       </div>
 
-      {/* Content */}
-      <Container className="relative z-20 text-center text-white">
-        <div className="max-w-4xl mx-auto">
+      {/* Content - Left-aligned layout */}
+      <Container className="relative z-20 text-white flex items-start justify-start h-full">
+        <div className="max-w-2xl pt-20">
           <h1 
             ref={titleRef}
             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
           >
-            <span className="block">Population Genetics</span>
-            <span className="block text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block text-white">Population Genetics</span>
+            <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Meets Deep Learning
             </span>
           </h1>
           
           <p 
             ref={subtitleRef}
-            className="text-lg sm:text-xl lg:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl lg:text-2xl text-slate-200 mb-8 leading-relaxed"
           >
             Discover how artificial intelligence is revolutionizing our understanding of 
-            <span className="text-blue-300 font-semibold"> human ancestry</span>, 
-            <span className="text-purple-300 font-semibold"> evolution</span>, and 
-            <span className="text-teal-300 font-semibold"> genetic diversity</span>.
+            <span className="text-cyan-300 font-semibold"> human ancestry</span>, 
+            <span className="text-blue-300 font-semibold"> evolution</span>, and 
+            <span className="text-purple-300 font-semibold"> genetic diversity</span>.
           </p>
           
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 items-start">
             <Button 
               variant="primary" 
               size="lg"
               onClick={scrollToNext}
-              className="min-w-[200px] bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600"
+              className="min-w-[200px] bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25"
             >
               Explore the Science
             </Button>
@@ -110,7 +110,7 @@ export function Hero() {
               variant="outline" 
               size="lg"
               onClick={() => document.getElementById('applications')?.scrollIntoView({ behavior: 'smooth' })}
-              className="min-w-[200px] border-white/30 text-white hover:bg-white/10"
+              className="min-w-[200px] border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
               See Applications
             </Button>
