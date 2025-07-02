@@ -109,32 +109,40 @@ export function About() {
         trigger: sectionRef.current,
         start: "top 80%",
         end: "bottom 20%",
-        toggleActions: "play none none reverse"
+        toggleActions: "play none none none"
       }
     });
 
-    tl.from(titleRef.current, {
-      y: 50,
+    // Set initial states
+    gsap.set([titleRef.current, cardsRef.current?.children, timelineRef.current?.children], {
       opacity: 0,
+      y: 30
+    });
+
+    tl.to(titleRef.current, {
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       ease: "power3.out"
     })
-    .from(cardsRef.current?.children || [], {
-      y: 30,
-      opacity: 0,
+    .to(cardsRef.current?.children || [], {
+      y: 0,
+      opacity: 1,
       duration: 0.6,
       stagger: 0.2,
       ease: "power3.out"
     }, "-=0.4")
-    .from(timelineRef.current?.children || [], {
-      x: -30,
-      opacity: 0,
+    .to(timelineRef.current?.children || [], {
+      x: 0,
+      opacity: 1,
       duration: 0.5,
       stagger: 0.1,
       ease: "power3.out"
     }, "-=0.2");
 
-    return () => tl.kill();
+    return () => {
+      tl.kill();
+    };
   }, []);
 
   const getColorClasses = (color: string) => {
@@ -219,7 +227,7 @@ export function About() {
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-600 mb-2">~10 million</div>
               <div className="text-sm font-medium text-slate-700 mb-1">Common genetic variants</div>
-              <div className="text-xs text-slate-500">SNPs with >1% frequency</div>
+              <div className="text-xs text-slate-500">SNPs with &gt;1% frequency</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600 mb-2">7+ populations</div>

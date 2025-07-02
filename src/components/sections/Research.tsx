@@ -100,7 +100,7 @@ export function Research() {
             ref={titleRef}
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6"
           >
-            The 
+            The{' '} 
             <span className="text-gradient"> Deep Learning</span>
             {' '}Revolution
           </h2>
