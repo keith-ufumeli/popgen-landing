@@ -79,9 +79,10 @@ export function Hero() {
         <div className="max-w-2xl">
           <h1 
             ref={titleRef}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-[0.95] tracking-tight"
           >
-            <span className="block text-white">Population Genetics</span>
+            <span className="block text-white mb-1">Population</span>
+            <span className="block text-white mb-1">Genetics</span>
             <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Meets Deep Learning
             </span>
@@ -89,12 +90,12 @@ export function Hero() {
           
           <p 
             ref={subtitleRef}
-            className="text-lg sm:text-xl lg:text-2xl text-slate-200 mb-8 leading-relaxed"
+            className="text-lg sm:text-xl lg:text-2xl text-slate-200 mb-8 leading-relaxed font-light max-w-2xl"
           >
             Discover how artificial intelligence is revolutionizing our understanding of 
-            <span className="text-cyan-300 font-semibold"> human ancestry</span>, 
-            <span className="text-blue-300 font-semibold"> evolution</span>, and 
-            <span className="text-purple-300 font-semibold"> genetic diversity</span>.
+            <span className="text-cyan-300 font-medium"> human ancestry</span>, 
+            <span className="text-blue-300 font-medium"> evolution</span>, and 
+            <span className="text-purple-300 font-medium"> genetic diversity</span>.
           </p>
           
           <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 items-start">
