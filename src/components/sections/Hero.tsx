@@ -54,13 +54,13 @@ export function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 pt-16"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      <div className="absolute inset-0  bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
       
-      {/* 3D DNA Helix - Moved to right side */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full z-10 opacity-60">
+      {/* 3D DNA Helix - Responsive positioning */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full z-10 opacity-60 md:opacity-60 sm:opacity-40 max-sm:opacity-20 max-sm:w-full max-sm:top-1/2 max-sm:translate-y-0 max-sm:h-1/2">
         <DNAHelix />
       </div>
 
@@ -69,17 +69,17 @@ export function Hero() {
         className="absolute inset-0 z-0"
         style={{ transform: parallaxTransform }}
       >
-        <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60" />
-        <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-40" />
-        <div className="absolute bottom-40 left-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse opacity-50" />
+        <div className="absolute top-1/4 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60 max-sm:top-1/3 max-sm:left-5" />
+        <div className="absolute top-1/3 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-40 max-sm:top-1/4 max-sm:right-10" />
+        <div className="absolute bottom-1/4 left-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse opacity-50 max-sm:bottom-1/3 max-sm:left-10" />
       </div>
 
-      {/* Content - Left-aligned layout */}
-      <Container className="absolute top-20 left-0 right-0 z-20 text-white">
-        <div className="max-w-2xl">
+      {/* Content - Responsive layout */}
+      <Container className="absolute inset-0 flex items-center z-20 text-white max-sm:px-4">
+        <div className="max-w-2xl max-sm:max-w-full max-sm:pr-4">
           <h1 
             ref={titleRef}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-[0.95] tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-[0.95] tracking-tight"
           >
             <span className="block text-white mb-1">Population</span>
             <span className="block text-white mb-1">Genetics</span>
@@ -90,7 +90,7 @@ export function Hero() {
           
           <p 
             ref={subtitleRef}
-            className="text-lg sm:text-xl lg:text-2xl text-slate-200 mb-8 leading-relaxed font-light max-w-2xl"
+            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 mb-6 sm:mb-8 leading-relaxed font-light max-w-2xl"
           >
             Discover how artificial intelligence is revolutionizing our understanding of 
             <span className="text-cyan-300 font-medium"> human ancestry</span>, 
@@ -98,12 +98,12 @@ export function Hero() {
             <span className="text-purple-300 font-medium"> genetic diversity</span>.
           </p>
           
-          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 items-start">
+          <div ref={ctaRef} className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
             <Button 
               variant="primary" 
               size="lg"
               onClick={scrollToNext}
-              className="min-w-[200px] bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25"
+              className="w-full sm:min-w-[200px] bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25"
             >
               Explore the Science
             </Button>
@@ -111,7 +111,7 @@ export function Hero() {
               variant="outline" 
               size="lg"
               onClick={() => document.getElementById('applications')?.scrollIntoView({ behavior: 'smooth' })}
-              className="min-w-[200px] border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              className="w-full sm:min-w-[200px] border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
             >
               See Applications
             </Button>

@@ -8,13 +8,13 @@ export function ScrollIndicator({ onClick }: ScrollIndicatorProps) {
   return (
     <button
       onClick={onClick}
-      className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
+      className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 text-white/70 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
       aria-label="Scroll to next section"
     >
       <div className="flex flex-col items-center animate-bounce">
-        <span className="text-sm font-medium mb-2">Scroll</span>
+        <span className="text-xs sm:text-sm font-medium mb-1 sm:mb-2">Scroll</span>
         <svg 
-          className="w-6 h-6" 
+          className="w-5 h-5 sm:w-6 sm:h-6" 
           fill="none" 
           stroke="currentColor" 
           strokeWidth="2"

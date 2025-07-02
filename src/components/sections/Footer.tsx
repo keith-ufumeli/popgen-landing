@@ -110,9 +110,10 @@ export function Footer() {
         </div>
 
         <div className="border-t border-slate-800 mt-8 pt-8 text-center">
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-300 text-sm">
             © {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
           </p>
+          <p className='text-slate-400 text-sm'>Developed by <a href={SITE_CONFIG.links.github} className='text-blue-300 hover:text-white transition-colors duration-200' target='_blank'>Keith Ufumeli</a></p>
         </div>
       </Container>
     </footer>
