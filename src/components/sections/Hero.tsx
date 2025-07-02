@@ -54,7 +54,7 @@ export function Hero() {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-start pt-20 overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
@@ -75,8 +75,8 @@ export function Hero() {
       </div>
 
       {/* Content - Left-aligned layout */}
-      <Container className="relative z-20 text-white flex items-start justify-start h-full">
-        <div className="max-w-2xl pt-20">
+      <Container className="absolute top-20 left-0 right-0 z-20 text-white">
+        <div className="max-w-2xl">
           <h1 
             ref={titleRef}
             className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 leading-tight"
