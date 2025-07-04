@@ -76,9 +76,15 @@ export function Hero() {
       {/* Content - Responsive layout */}
       <Container className="absolute inset-0 flex items-center z-20 text-white max-sm:px-4">
         <div className="max-w-2xl max-sm:max-w-full max-sm:pr-4">
+          {/* Tagline */}
+          <p 
+            className="text-xs text-cyan-300 font-medium mb-4 tracking-wide uppercase"
+          >
+            Revolutionary Research Platform
+          </p>
           <h1 
             ref={titleRef}
-            className="text-5xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 leading-[0.95] tracking-tight"
+            className="text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 leading-[0.95] tracking-tight"
           >
             <span className="block text-white mb-1">Population</span>
             <span className="block text-white mb-1">Genetics</span>
