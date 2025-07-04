@@ -78,7 +78,7 @@ export function Hero() {
         <div className="max-w-2xl max-sm:max-w-full max-sm:pr-4">
           <h1 
             ref={titleRef}
-            className="text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 leading-[0.95] tracking-tight"
+            className="text-5xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 leading-[0.95] tracking-tight"
           >
             <span className="block text-white mb-1">Population</span>
             <span className="block text-white mb-1">Genetics</span>
