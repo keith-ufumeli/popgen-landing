@@ -79,7 +79,7 @@ export function Hero() {
         <div className="max-w-2xl max-sm:max-w-full max-sm:pr-4">
           <h1 
             ref={titleRef}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-[0.95] tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-6 leading-[0.95] tracking-tight"
           >
             <span className="block text-white mb-1">Population</span>
             <span className="block text-white mb-1">Genetics</span>
@@ -90,7 +90,7 @@ export function Hero() {
           
           <p 
             ref={subtitleRef}
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-200 mb-6 sm:mb-8 leading-relaxed font-light max-w-2xl"
+            className="text-base sm:text-lg md:text-xl text-slate-200 mb-6 sm:mb-8 leading-relaxed font-light max-w-2xl"
           >
             Discover how artificial intelligence is revolutionizing our understanding of 
             <span className="text-cyan-300 font-medium"> human ancestry</span>, 
