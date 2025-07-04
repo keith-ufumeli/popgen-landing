@@ -4,7 +4,6 @@ import { useRef, useEffect } from 'react';
 import { Container } from '../../components/ui/Container';
 import { Button } from '../../components/ui/Button';
 import { DNAHelix } from '../../components/3d/DNAHelix';
-import { ScrollIndicator } from '../../components/ui/ScrollIndicator';
 import { useParallax } from '../../hooks/useParallax';
 import { gsap } from 'gsap';
 
@@ -103,24 +102,22 @@ export function Hero() {
               variant="primary" 
               size="lg"
               onClick={scrollToNext}
-              className="w-full sm:min-w-[200px] bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 shadow-lg shadow-cyan-500/25"
+              className="group relative w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 hover:from-cyan-600 hover:via-blue-600 hover:to-purple-600 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 rounded-full font-medium text-white uppercase tracking-wide text-sm border-0"
             >
-              Explore the Science
+              <span className="relative z-10">Explore the Science</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 via-blue-600 to-purple-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               onClick={() => document.getElementById('applications')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:min-w-[200px] border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
+              className="group w-full sm:w-auto px-8 py-4 border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 rounded-full font-medium uppercase tracking-wide text-sm hover:border-white/50 hover:shadow-lg hover:shadow-white/10"
             >
               See Applications
             </Button>
           </div>
         </div>
       </Container>
-
-      {/* Scroll Indicator */}
-      <ScrollIndicator onClick={scrollToNext} />
     </section>
   );
 }
