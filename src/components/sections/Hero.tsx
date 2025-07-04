@@ -78,9 +78,10 @@ export function Hero() {
         <div className="max-w-2xl max-sm:max-w-full max-sm:pr-4">
           {/* Tagline */}
           <p 
-            className="text-xs text-cyan-300 font-medium mb-4 tracking-wide uppercase"
+            className="text-xs text-cyan-300 font-medium mb-4 tracking-wide uppercase relative inline-block"
           >
             Revolutionary Research Platform
+            <span className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-cyan-300 via-cyan-400 to-transparent opacity-60"></span>
           </p>
           <h1 
             ref={titleRef}
